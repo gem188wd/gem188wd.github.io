@@ -72,6 +72,7 @@
       transition: transform 0.2s, box-shadow 0.3s;
     }
     .btn-login:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(176,181,191,0.4); }
+    a.btn-login, a.btn-primary, a.btn-secondary { text-decoration: none; display: inline-block; text-align: center; }
 
     .hamburger { display: none; background: none; border: none; cursor: pointer; }
     .hamburger svg { width: 24px; height: 24px; stroke: var(--fg); }
@@ -242,29 +243,43 @@
   </style>
 </head>
 <body>
-<!-- Di navbar - nav-links -->
-<div class="nav-links">
-  <a href="#games">Games</a>
-  <a href="#promo">Promo</a>
-  <a href="#bantuan">Bantuan</a>
-  <a href="#tentang">Tentang</a>
-  <button class="btn-login" onclick="window.open('https://gem188-hape.com/', '_blank')">LOGIN</button>
-</div>
 
-<!-- Di mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#games">Games</a>
-  <a href="#promo">Promo</a>
-  <a href="#bantuan">Bantuan</a>
-  <a href="#tentang">Tentang</a>
-  <button class="btn-login" style="margin-top:0.5rem; width:fit-content;" onclick="window.open('https://gem188-hape.com/', '_blank')">LOGIN</button>
-</div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo"><span class="logo-gem">GEM</span><span class="logo-188">188</span></a>
+      <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="#promo">Promo</a>
+        <a href="#bantuan">Bantuan</a>
+        <a href="#tentang">Tentang</a>
+        <a href="https://gem188-hape.com" target="_blank" class="btn-login">LOGIN</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#games">Games</a>
+      <a href="#promo">Promo</a>
+      <a href="#bantuan">Bantuan</a>
+      <a href="#tentang">Tentang</a>
+      <a href="https://gem188-hape.com" target="_blank" class="btn-login" style="margin-top:0.5rem; width:fit-content;">LOGIN</a>
+    </div>
+  </nav>
 
-<!-- Di hero buttons -->
-<div class="hero-buttons fade-up delay-3">
-  <button class="btn-primary" onclick="window.open('https://gem188-hape.com/', '_blank')">MAIN SEKARANG</button>
-  <button class="btn-secondary" onclick="window.open('https://gem188-hape.com/account/register', '_blank')">DAFTAR GRATIS</button>
-</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge fade-up">
+        <span class="badge-dot"></span>
+        <span>Platform Game Online Terpercaya #1</span>
+      </div>
+      <h1 class="fade-up delay-1"><span class="gem">GEM</span><span class="num">188</span></h1>
+      <p class="hero-desc fade-up delay-2">Rasakan sensasi bermain game online terbaik dengan keamanan &amp; kenyamanan tingkat tinggi</p>
+      <div class="hero-buttons fade-up delay-3">
+        <a href="https://gem188-hape.com/account/register" target="_blank" class="btn-primary">DAFTAR SEKARANG</a>
+      </div>
       <div class="stats fade-up delay-4">
         <div class="stat">
           <div class="stat-icon">🎮</div>
